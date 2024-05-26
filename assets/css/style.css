@@ -157,17 +157,16 @@ img {
     z-index: 2;
 }
 
-#about #bg-dark::after {
-    content: "";
-    width: 40%;
-    height: 100%;
-    background-color: rgba(var(--c-brand-rgb), 0.2);
+  #about #bg-dark::after {
     position: absolute;
-    top: 0;
-    right: 0;
     z-index: -1;
-    border-radius: 0px 5px 5px 0px;
-}
+    bottom: -30px;
+    right: -20px;
+    content: "";
+    width: 412px;
+    height: 220px;
+    background: url("../images/dots.png") no-repeat;
+  }
 #about .iconbox{
     cursor: pointer;
 }
@@ -351,4 +350,12 @@ footer .line {
 .social-icons a:hover {
     background-color: var(--c-brand);
     color: white;
+}
+
+
+@media screen and (max-width: 415px) {
+    #about #bg-dark::after {
+        right: 0;
+        width: 200px;
+      }
 }
